@@ -5,8 +5,8 @@ ENV APP_HOME=/home/app/web
 
 RUN mkdir -p $HOME
 RUN mkdir -p $APP_HOME
-RUN mkdir -p $APP_HOME/staticfiles
-RUN mkdir -p $APP_HOME/mediafiles
+RUN mkdir -p $APP_HOME/staticfiles_1
+RUN mkdir -p $APP_HOME/mediafiles_1
 
 WORKDIR $APP_HOME
 
