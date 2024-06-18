@@ -12,5 +12,6 @@ then
 fi
 
 python manage.py collectstatic
+gunicorn project_1.wsgi:application --bind 0.0.0.0:8001
 
 exec "$@"
