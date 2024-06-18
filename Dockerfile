@@ -1,6 +1,6 @@
 FROM python:3.11.9-slim-bullseye
 
-ENV APP_HOME=/home/app/web
+ENV APP_HOME=/home/app/project_1
 
 RUN mkdir -p $APP_HOME
 RUN mkdir -p $APP_HOME/staticfiles_1
