@@ -1,9 +1,7 @@
 FROM python:3.11.9-slim-bullseye
 
-ENV HOME=/home/app
 ENV APP_HOME=/home/app/web
 
-RUN mkdir -p $HOME
 RUN mkdir -p $APP_HOME
 RUN mkdir -p $APP_HOME/staticfiles_1
 RUN mkdir -p $APP_HOME/mediafiles_1
@@ -19,4 +17,10 @@ RUN pip install --upgrade pip
 COPY ./requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . $APP_HOME
+COPY ./entrypoint.sh .
+RUN sed -i 's/\r$//g' $APP_HOME/entrypoint.sh
+RUN chmod +x $APP_HOME/entrypoint.sh
+
+COPY . .
+
+ENTRYPOINT ["$APP_HOME/entrypoint.sh"]
