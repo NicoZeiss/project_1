@@ -3,8 +3,8 @@ FROM python:3.11.9-slim-bullseye
 ENV APP_HOME=/home/app/project_1
 
 RUN mkdir -p $APP_HOME
-RUN mkdir -p $APP_HOME/staticfiles_1
-RUN mkdir -p $APP_HOME/mediafiles_1
+RUN mkdir -p $APP_HOME/staticfiles
+RUN mkdir -p $APP_HOME/mediafiles
 
 WORKDIR $APP_HOME
 
