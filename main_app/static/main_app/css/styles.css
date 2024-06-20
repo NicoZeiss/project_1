@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: green;
+    background: blue;
     color: var(--color-text);
     overflow-x: hidden;
 }
