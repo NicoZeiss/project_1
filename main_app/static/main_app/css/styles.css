@@ -21,6 +21,8 @@ body {
     margin-top: 50px;
     width: 700px;
     height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .image_container img {
