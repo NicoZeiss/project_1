@@ -12,9 +12,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #333;
+    background: #111;
     color: var(--color-text);
     overflow-x: hidden;
+}
+
+h1 {
+    text-transform: uppercase;
 }
 
 .image_container {
@@ -23,7 +27,7 @@ body {
     height: 400px;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.3);
 }
 
 .image_container img {
