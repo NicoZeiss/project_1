@@ -11,8 +11,8 @@ then
     echo "PostgreSQL started"
 fi
 
-python manage.py migrate --noinput
-python manage.py collectstatic --noinput
+python manage.py migrate
+python manage.py collectstatic --noinput --clear
 gunicorn project_1.wsgi:application --bind 0.0.0.0:8001
 
 exec "$@"
