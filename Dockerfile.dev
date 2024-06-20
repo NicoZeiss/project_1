@@ -1,0 +1,16 @@
+FROM python:3.11.9-slim-bullseye
+
+ENV APP_HOME=/home/app/project_1
+
+WORKDIR $APP_HOME
+
+ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE 1
+
+RUN apt update
+
+RUN pip install --upgrade pip
+COPY ./requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
